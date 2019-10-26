@@ -31,7 +31,7 @@ public class LoggingAspect {
                 joinPoint.getSignature().getName());
     }
 
-    @AfterThrowing(pointcut = "execution(* com.santander.parking.service.*.*(..)))", throwing = "ex")
+    @AfterThrowing(pointcut = "execution(* com.assignment.demo.exceptions.*.*(..)))", throwing = "ex")
     public void logServiceAccessException(JoinPoint joinPoint, Exception ex) throws Throwable {
     	log.error("Error in: {}.{}()", joinPoint.getSignature().getDeclaringTypeName(), 
     			joinPoint.getSignature().getName(), ex);
